@@ -1,6 +1,6 @@
 {
   "name": "highlight-plus",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A React component that extends react-highlight to highlight search terms within syntax-highlighted code.",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",

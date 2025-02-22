@@ -6,6 +6,7 @@
 
 It provides an easy way to highlight keywords, variables, or any other word within the syntax-highlighted code snippet.
 
+<br/>
 
 ### Features
 
@@ -39,15 +40,15 @@ It provides an easy way to highlight keywords, variables, or any other word with
 
     ```javascript
     import React from 'react';
-    import HighlightPlus from "react-highlight-plus";
+    import HighlightPlus from "highlight-plus";
 
     const MyComponent = () => {
         const code_string = `
             function helloReactHighlightPlus () {
-                const greet_msg = "Hello, react-highlight-plus";
+                const greet_msg = "Hello, highlight-plus";
                 console.log(greet_msg);
             }
-        `
+        `;
 
         const word_to_highlight = "high";
 
@@ -70,15 +71,15 @@ It provides an easy way to highlight keywords, variables, or any other word with
 
     ```javascript
     import React from 'react';
-    import HighlightPlus from "react-highlight-plus";
+    import HighlightPlus from "highlight-plus";
 
     const MyComponent = () => {
         const code_string = `
             function helloReactHighlightPlus () {
-                const greet_msg = "Hello, react-highlight-plus";
+                const greet_msg = "Hello, highlight-plus";
                 console.log(greet_msg);
             }
-        `
+        `;
 
         const word_to_highlight = "high";
 
