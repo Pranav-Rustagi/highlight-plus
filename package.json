@@ -1,0 +1,52 @@
+{
+  "name": "highlight-plus",
+  "version": "1.0.0",
+  "description": "A React component that extends react-highlight to highlight search terms within syntax-highlighted code.",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "del dist && npm run build:esm && npm run build:cjs",
+    "build:esm": "tsc && xcopy src\\styles\\* dist\\esm\\styles /s /e /h /ym",
+    "build:cjs": "tsc --module CommonJS --outDir dist/cjs && xcopy src\\styles\\* dist\\cjs\\styles /s /e /h /y",
+    "publish": "npm publish --access public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pranav-Rustagi/highlight-plus.git"
+  },
+  "keywords": [
+    "highlight.js",
+    "react",
+    "highlight",
+    "react-highlight",
+    "code-highlight",
+    "code",
+    "syntax",
+    "syntax-highlight"
+  ],
+  "author": "Pranav Rustagi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Pranav-Rustagi/highlight-plus/issues"
+  },
+  "homepage": "https://github.com/Pranav-Rustagi/highlight-plus#readme",
+  "devDependencies": {
+    "@types/node": "^22.13.5",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "typescript": "^5.7.3"
+  },
+  "peerDependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "dependencies": {
+    "@types/react-highlight": "^0.12.8",
+    "react-highlight": "^0.15.0"
+  }
+}

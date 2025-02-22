@@ -1,0 +1,40 @@
+.rhp-tlr-0 {
+    top: 0!important;
+    left: 0!important;
+    right: 0!important;
+}
+
+.rhp-cont {
+    position: relative!important;
+    overflow-x: auto!important;
+}
+
+.rhp-cont pre {
+    margin: 0!important;
+}
+
+.rhp-cont pre:first-child {
+    z-index: 1000!important;
+    position: relative!important;
+}
+
+.rhp-cont pre:not(:first-child) {
+    z-index: 10!important;
+    position: absolute!important;
+}
+
+.rhp-cont pre code.hljs {
+    display: block!important;
+    text-align: left!important;
+    overflow-x: visible!important;
+    position: relative!important;
+}
+
+
+.rhp-mark {
+    background-color: yellow;
+}
+
+.rhp-bck-transparent {
+    background-color: transparent!important;
+}
