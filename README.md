@@ -44,7 +44,7 @@ It provides an easy way to highlight keywords, variables, or any other word with
 
     const MyComponent = () => {
         const code_string = `
-            function helloReactHighlightPlus () {
+            function helloHighlightPlus () {
                 const greet_msg = "Hello, highlight-plus";
                 console.log(greet_msg);
             }
@@ -54,7 +54,7 @@ It provides an easy way to highlight keywords, variables, or any other word with
 
         return (
             <div>
-                <h1>React Highlight Plus example one</h1>
+                <h1>Highlight Plus example one</h1>
                 <HighlightPlus
                     language="javascript"
                     word_to_highlight={word_to_highlight}
@@ -75,7 +75,7 @@ It provides an easy way to highlight keywords, variables, or any other word with
 
     const MyComponent = () => {
         const code_string = `
-            function helloReactHighlightPlus () {
+            function helloHighlightPlus () {
                 const greet_msg = "Hello, highlight-plus";
                 console.log(greet_msg);
             }
@@ -85,7 +85,7 @@ It provides an easy way to highlight keywords, variables, or any other word with
 
         return (
             <div>
-                <h1>React Highlight Plus example one</h1>
+                <h1>Highlight Plus example two</h1>
                 <HighlightPlus
                     language="javascript"
                     word_to_highlight={word_to_highlight}
