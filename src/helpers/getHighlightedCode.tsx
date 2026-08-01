@@ -1,29 +1,28 @@
 import React from "react";
 
 const getHighlightedCode = (content = '', word_to_highlight = '', highlight_color = "yellow") => {
-    const spotlight_regex = new RegExp("<rhp-mark spotlight>(.*?)</rhp-mark>", 'g');
+    if (!word_to_highlight.trim()) {
+        return content;
+    }
 
-    console.log({content});
-    const rhp_content = content.replaceAll(word_to_highlight, `<rhp-mark spotlight>${word_to_highlight}</rhp-mark>`);
+    const parts = content.split(word_to_highlight);
 
-
-    const highlightedCode = rhp_content.split(spotlight_regex).map((part, index) => {
-        if (index % 2 === 0) {
+    return parts.map((part, index) => {
+        if (index === parts.length - 1) {
             return part;
         }
         return (
-            <span
-                className="rhp-mark"
-                style={{ backgroundColor: highlight_color }}
-                key={`rhp-${index}`}
-            >
+            <React.Fragment key={`rhp-${index}`}>
                 {part}
-            </span>
+                <span
+                    className="rhp-mark"
+                    style={{ backgroundColor: highlight_color }}
+                >
+                    {word_to_highlight}
+                </span>
+            </React.Fragment>
         );
     });
-
-    return highlightedCode;
-
 }
 
 export default getHighlightedCode;

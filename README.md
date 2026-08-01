@@ -114,6 +114,8 @@ Requires `react` and `react-dom` version `19.0.0` or higher (peer dependencies).
 | language | Programming language of the code to be displayed | string | auto-detected |
 | highlight_color | Background color of the highlighted string | string | yellow | 
 
+Matching is case-sensitive and matches on substrings (e.g. `"high"` also matches inside `"highlight"`). If `word_to_highlight` is empty or whitespace-only, no highlighting is applied and the code is rendered unmodified.
+
 <br/>
 
 ### TypeScript
