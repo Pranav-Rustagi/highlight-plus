@@ -1,5 +1,9 @@
 # highlight-plus
 
+[![npm version](https://img.shields.io/npm/v/highlight-plus.svg)](https://www.npmjs.com/package/highlight-plus)
+[![npm downloads](https://img.shields.io/npm/dm/highlight-plus.svg)](https://www.npmjs.com/package/highlight-plus)
+[![license](https://img.shields.io/npm/l/highlight-plus.svg)](LICENSE)
+
 ### Description
 
 `highlight-plus` is a React component built on top of `react-highlight`, extending its functionality by allowing you to highlight specific words within the syntax-highlighted code.
@@ -30,6 +34,8 @@ It provides an easy way to highlight keywords, variables, or any other word with
     ```bash
     yarn add highlight-plus
     ```
+
+Requires `react` and `react-dom` version `19.0.0` or higher (peer dependencies).
 
 <br/>
 
@@ -110,9 +116,19 @@ It provides an easy way to highlight keywords, variables, or any other word with
 
 <br/>
 
+### TypeScript
+
+`highlight-plus` ships its own type declarations, so no extra `@types` package is needed. The prop types are exported as `HighlightPlusProps`:
+
+```typescript
+import HighlightPlus, { HighlightPlusProps } from "highlight-plus";
+```
+
+<br/>
+
 ### Customizing Syntax Highlighting
 
-`highlight.js` offers a wide range of themes to choose from for syntax highlighting. You can find various CSS files for different themes at [cdnjs.com](cdnjs.com/libraries/highlight.js). 
+`highlight.js` offers a wide range of themes to choose from for syntax highlighting. You can find various CSS files for different themes at [cdnjs.com](https://cdnjs.com/libraries/highlight.js). 
 
 To use a custom theme, simply link CSS in the `<head>` tag in your HTML file or just import the desired CSS file at the top of your CSS.
 
@@ -137,7 +153,13 @@ Example 2: Importing in CSS file
 ```
 
 
-<br />
+<br/>
+
+### Contributing
+
+Found a bug or have a suggestion? Open an issue at [github.com/Pranav-Rustagi/highlight-plus/issues](https://github.com/Pranav-Rustagi/highlight-plus/issues).
+
+<br/>
 
 ### License
 
