@@ -8,9 +8,9 @@
     "dist"
   ],
   "scripts": {
-    "build": "del dist && npm run build:esm && npm run build:cjs",
-    "build:esm": "tsc && xcopy src\\styles\\* dist\\esm\\styles /s /e /h /ym",
-    "build:cjs": "tsc --module CommonJS --outDir dist/cjs && xcopy src\\styles\\* dist\\cjs\\styles /s /e /h /y",
+    "build": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\" && npm run build:esm && npm run build:cjs",
+    "build:esm": "tsc && node -e \"require('fs').cpSync('src/styles','dist/esm/styles',{recursive:true})\"",
+    "build:cjs": "tsc --module CommonJS --outDir dist/cjs && node -e \"require('fs').cpSync('src/styles','dist/cjs/styles',{recursive:true})\"",
     "publish": "npm publish --access public"
   },
   "repository": {
@@ -37,6 +37,7 @@
     "@types/node": "^22.13.5",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
+    "@types/react-highlight": "^0.12.8",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "typescript": "^5.7.3"
@@ -46,7 +47,6 @@
     "react-dom": "^19.0.0"
   },
   "dependencies": {
-    "@types/react-highlight": "^0.12.8",
     "react-highlight": "^0.15.0"
   }
 }
