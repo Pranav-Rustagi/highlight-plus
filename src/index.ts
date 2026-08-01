@@ -1,4 +1,5 @@
 import "./styles/style.css";
 import HighlightPlus from "./components/HighlightPlus";
 
+export type { HighlightPlusProps } from "./components/HighlightPlus";
 export default HighlightPlus;

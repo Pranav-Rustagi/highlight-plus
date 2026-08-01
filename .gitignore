@@ -34,3 +34,6 @@ package-lock.lock
 *.njsproj
 *.sln
 *.sw?
+
+# Exclude local todo notes
+todo.md
