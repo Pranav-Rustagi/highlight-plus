@@ -10,8 +10,6 @@ export interface HighlightPlusProps {
 }
 
 const HighlightPlus: React.FC<HighlightPlusProps> = ({ code_content, language, word_to_highlight, highlight_color }) => {
-    console.log({code_content, language, word_to_highlight, highlight_color});
-
     return (
         <div className="rhp-cont hljs">
             <HighlightFront
