@@ -22,10 +22,11 @@
     "react",
     "highlight",
     "react-highlight",
-    "code-highlight",
     "code",
     "syntax",
-    "syntax-highlight"
+    "syntax-highlighting",
+    "search",
+    "typescript"
   ],
   "author": "Pranav Rustagi",
   "license": "MIT",
