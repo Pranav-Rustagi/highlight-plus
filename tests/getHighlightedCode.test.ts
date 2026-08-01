@@ -75,8 +75,8 @@ describe("getHighlightedCode", () => {
         );
     });
 
-    it("works with default parameters", () => {
-        const result = getHighlightedCode();
-        expect(render(result)).toBe("");
+    it("uses the default highlight_color when omitted", () => {
+        const html = render(getHighlightedCode("foo bar", "bar"));
+        expect(html).toBe('foo <span class="rhp-mark" style="background-color:yellow">bar</span>');
     });
 });
