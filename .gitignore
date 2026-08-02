@@ -16,14 +16,6 @@ lerna-debug.log*
 # Excluding lock files
 package-lock.lock
 
-# Exclude test files and directories
-/tests
-/__tests__
-/test
-/spec
-/*.test.js
-/*.spec.js
-
 # Exclude miscellaneous files
 /.DS_Store
 .vscode/*
