@@ -5,11 +5,8 @@
     "esModuleInterop": true,
     "jsx": "react",
     "lib": [
-      "es5",
-      "es2015",
-      "es2016",
-      "dom",
-      "esnext"
+      "es2021",
+      "dom"
     ],
     "types": [
       "node"
@@ -19,12 +16,18 @@
     "noImplicitAny": true,
     "noUnusedLocals": true,
     "outDir": "dist/esm",
+    "rootDir": "src",
+    "skipLibCheck": true,
     "sourceMap": true,
     "strict": true,
-    "target": "es6"
+    "target": "es2021"
   },
   "include": [
     "src/**/*.ts",
     "src/**/*.tsx"
+  ],
+  "exclude": [
+    "src/**/*.test.ts",
+    "src/**/*.test.tsx"
   ]
 }
