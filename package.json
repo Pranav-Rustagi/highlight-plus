@@ -24,7 +24,7 @@
     "prepublishOnly": "npm run build",
     "release": "npm publish --access public",
     "test": "vitest run",
-    "typecheck": "tsc --noEmit && tsc --noEmit -p tsconfig.test.json"
+    "typecheck": "tsc --noEmit && tsc --noEmit -p tsconfig.cjs.json && tsc --noEmit -p tsconfig.test.json"
   },
   "repository": {
     "type": "git",
