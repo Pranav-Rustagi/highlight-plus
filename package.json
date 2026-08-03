@@ -23,7 +23,8 @@
     "build:cjs": "tsc -p tsconfig.cjs.json && node -e \"require('fs').cpSync('src/styles','dist/cjs/styles',{recursive:true})\"",
     "prepublishOnly": "npm run build",
     "release": "npm publish --access public",
-    "test": "vitest run"
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit && tsc --noEmit -p tsconfig.test.json"
   },
   "repository": {
     "type": "git",
