@@ -20,7 +20,7 @@
   "scripts": {
     "build": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\" && npm run build:esm && npm run build:cjs",
     "build:esm": "tsc && node -e \"require('fs').cpSync('src/styles','dist/esm/styles',{recursive:true})\"",
-    "build:cjs": "tsc --module CommonJS --outDir dist/cjs && node -e \"require('fs').cpSync('src/styles','dist/cjs/styles',{recursive:true})\"",
+    "build:cjs": "tsc -p tsconfig.cjs.json && node -e \"require('fs').cpSync('src/styles','dist/cjs/styles',{recursive:true})\"",
     "prepublishOnly": "npm run build",
     "release": "npm publish --access public",
     "test": "vitest run"

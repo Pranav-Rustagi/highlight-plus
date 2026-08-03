@@ -12,7 +12,7 @@
       "node"
     ],
     "module": "es2015",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "noImplicitAny": true,
     "noUnusedLocals": true,
     "outDir": "dist/esm",
