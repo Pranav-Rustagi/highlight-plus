@@ -20,10 +20,11 @@
   "scripts": {
     "build": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\" && npm run build:esm && npm run build:cjs",
     "build:esm": "tsc && node -e \"require('fs').cpSync('src/styles','dist/esm/styles',{recursive:true})\"",
-    "build:cjs": "tsc --module CommonJS --outDir dist/cjs && node -e \"require('fs').cpSync('src/styles','dist/cjs/styles',{recursive:true})\"",
+    "build:cjs": "tsc -p tsconfig.cjs.json && node -e \"require('fs').cpSync('src/styles','dist/cjs/styles',{recursive:true})\"",
     "prepublishOnly": "npm run build",
     "release": "npm publish --access public",
-    "test": "vitest run"
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit && tsc --noEmit -p tsconfig.cjs.json && tsc --noEmit -p tsconfig.test.json"
   },
   "repository": {
     "type": "git",
@@ -47,13 +48,13 @@
   },
   "homepage": "https://github.com/Pranav-Rustagi/highlight-plus#readme",
   "devDependencies": {
-    "@types/node": "^22.13.5",
-    "@types/react": "^19.0.10",
-    "@types/react-dom": "^19.0.4",
+    "@types/node": "^26.1.2",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
     "@types/react-highlight": "^0.12.8",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "typescript": "^5.7.3",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "typescript": "^7.0.2",
     "vitest": "^4.1.10"
   },
   "peerDependencies": {
