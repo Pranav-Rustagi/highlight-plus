@@ -22,4 +22,4 @@ const HighlightFront: React.FC<HighlightFrontProps> = ({ code_content = "", lang
     );
 }
 
-export default HighlightFront;
+export default React.memo(HighlightFront);

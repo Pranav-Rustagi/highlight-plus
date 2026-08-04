@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import getHighlightedCode from "../helpers/getHighlightedCode";
 
 export interface HighlightBackProps {
@@ -8,7 +8,10 @@ export interface HighlightBackProps {
 }
 
 const HighlightBack: React.FC<HighlightBackProps> = ({ code_content = "", search_text = "", highlight_color = "yellow" }) => {
-    const highlightedCode = getHighlightedCode(code_content, search_text, highlight_color);
+    const highlightedCode = useMemo(
+        () => getHighlightedCode(code_content, search_text, highlight_color),
+        [code_content, search_text, highlight_color]
+    );
 
     return (
         <pre className="rhp-tlr-0">
@@ -19,4 +22,4 @@ const HighlightBack: React.FC<HighlightBackProps> = ({ code_content = "", search
     );
 }
 
-export default HighlightBack;
+export default React.memo(HighlightBack);

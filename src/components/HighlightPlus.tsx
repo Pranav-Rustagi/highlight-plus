@@ -25,4 +25,4 @@ const HighlightPlus: React.FC<HighlightPlusProps> = ({ code_content, language, w
     )
 }
 
-export default HighlightPlus;
+export default React.memo(HighlightPlus);
