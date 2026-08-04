@@ -2,8 +2,8 @@ import React from "react";
 import Highlight from "react-highlight";
 
 export interface HighlightFrontProps {
-    code_content ?: string | undefined;
-    language ?: string | undefined;
+    code_content ?: string;
+    language ?: string;
 }
 
 const HighlightFront: React.FC<HighlightFrontProps> = ({ code_content = "", language }) => {
@@ -22,4 +22,4 @@ const HighlightFront: React.FC<HighlightFrontProps> = ({ code_content = "", lang
     );
 }
 
-export default HighlightFront;
+export default React.memo(HighlightFront);
