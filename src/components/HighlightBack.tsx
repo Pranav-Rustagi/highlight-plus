@@ -2,9 +2,9 @@ import React from "react";
 import getHighlightedCode from "../helpers/getHighlightedCode";
 
 export interface HighlightBackProps {
-    code_content ?: string | undefined;
-    search_text ?: string | undefined;
-    highlight_color ?: string | undefined;
+    code_content ?: string;
+    search_text ?: string;
+    highlight_color ?: string;
 }
 
 const HighlightBack: React.FC<HighlightBackProps> = ({ code_content = "", search_text = "", highlight_color = "yellow" }) => {
