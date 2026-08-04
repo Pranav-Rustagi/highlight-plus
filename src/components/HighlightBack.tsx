@@ -3,14 +3,14 @@ import getHighlightedCode from "../helpers/getHighlightedCode";
 
 export interface HighlightBackProps {
     code_content ?: string;
-    search_text ?: string;
+    word_to_highlight ?: string;
     highlight_color ?: string;
 }
 
-const HighlightBack: React.FC<HighlightBackProps> = ({ code_content = "", search_text = "", highlight_color = "yellow" }) => {
+const HighlightBack: React.FC<HighlightBackProps> = ({ code_content = "", word_to_highlight = "", highlight_color = "yellow" }) => {
     const highlightedCode = useMemo(
-        () => getHighlightedCode(code_content, search_text, highlight_color),
-        [code_content, search_text, highlight_color]
+        () => getHighlightedCode(code_content, word_to_highlight, highlight_color),
+        [code_content, word_to_highlight, highlight_color]
     );
 
     return (

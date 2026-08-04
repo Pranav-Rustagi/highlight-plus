@@ -18,7 +18,7 @@ const HighlightPlus: React.FC<HighlightPlusProps> = ({ code_content, language, w
             />
             <HighlightBack
                 code_content={code_content}
-                search_text={word_to_highlight}
+                word_to_highlight={word_to_highlight}
                 highlight_color={highlight_color}
             />
         </div>
